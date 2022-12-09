@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "a431d22c-020b-4b5f-b3b4-4f8cf3549e8b",
+		"name": "sip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19886738"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fname\": \"Puru\",\r\n    \"lname\": \"Kaushik\",\r\n    \"email\": \"akshhs@gmail.com\",\r\n    \"phone\": \"9826400911\",\r\n    \"password\": \"Puru@12345\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"akshhs@gmail.com\",\r\n  \r\n    \"password\": \"Puru@12345\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/:userId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MzkzMTg3YTVkNDMzN2U4ZWU5ZjFkMGEiLCJpYXQiOjE2NzA1ODQ4MTMsImV4cCI6MTY3MzE3NjgxM30.2SCSX-l1jmAGzsWm9zXRpSdp2mlfr1Ljxxo0PIpo5iw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"P\":2000,\r\n    \"n\":24,\r\n    \"r\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "6393187a5d4337e8ee9f1d0a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
